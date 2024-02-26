@@ -1,0 +1,276 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:150vh;
+    backdrop-filter: blur(5px);
+    background: url(https://i.gifer.com/origin/1a/1af8d3b487b77085d5288814f151e1de_w200.webp);
+    
+  }
+
+  /*Create the card container*/
+  .birthdayCard {
+    position: relative;
+    width:280px;
+    height:370px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s;
+  }
+  
+  .birthdayCard:hover {
+      transform: perspective(2500px) rotate(5deg);
+      box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+  }
+  
+  .birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg); 
+  }
+  
+  .birthdayCard:hover .front-text {
+    display: none;
+  }
+  
+  /*pode remover se quiser deixar o desenho*/
+  .birthdayCard:hover .wrap-deco {
+    display: none;
+  }
+  /**********/
+
+  .birthdayCard:hover .wrap-decoTwo {
+    display: none;
+  }
+
+  /*pode remover se quiser deixar o bolo*/
+  .birthdayCard:hover .plate {
+    display: none;
+  }
+   /**********/
+
+  /*Style the front of the card*/
+  .cardFront {
+    position: relative;
+    background-color: rgb(255, 246, 246);
+    width: 280px;
+    height:370px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
+    transition: .4s;
+  }
+  
+  .happy1, .toyou1 {
+    position: relative;
+    font-family: "Shantell Sans";
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px; 
+    font-style: normal;
+  }
+
+  .happy2, .toyou2 {
+    position: relative;
+    font-family: "Shantell Sans";
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px; 
+    font-style: normal;
+  }
+
+
+  .happy1 {
+    top:198px;
+  }
+  
+  .toyou1 {
+    top:123px;
+  }
+  
+  .bday1 {
+    position: relative;
+    font-family: "Shantell Sans", cursive;
+    font-size: 30px;
+    text-align: center;
+    top:163px;
+  }
+
+  .happy2 {
+    top:198px;
+  }
+  
+  .toyou2 {
+    top:123px;
+  }
+  
+  .bday2 {
+    position: relative;
+    font-family: "Shantell Sans", cursive;
+    font-size: 30px;
+    text-align: center;
+    top:163px;
+  }
+  
+  .wrap-deco {
+    position: absolute;
+    top:-230px;
+    left:-260px;
+  }
+  
+  .decorations {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #333;
+    border-radius: 50%;
+  } 
+  
+  .decorations:before, .decorations:after, .decorationsTwo:before, .decorationsTwo:after, .decorationsThree:before, .decorationsThree:after {
+    content:"";
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width:0;
+    height:0;
+  }
+  
+  .decorations:before {
+    border-top: 40px solid #f15bb5;
+    top:297px;
+    left:210px;
+    transform: rotate(-5deg);
+  }
+  
+  .decorations:after{
+    border-top: 40px solid #f4d35e;
+    top:288px;
+    left:260px;
+    transform: rotate(-17deg);
+  }
+  
+  .decorationsTwo:before {
+    border-top: 40px solid #00f5d4;
+    top:268px;
+    left:315px;
+    transform: rotate(-30deg);
+  }
+  
+  .decorationsTwo:after, .decorationsThree:after {
+    border-top: 40px solid #f15bb5;
+    top:238px;
+    left:355px;
+    transform: rotate(-40deg);
+  }
+  
+  .wrap-decoTwo {
+    transform: scaleX(-1);
+    position: absolute;
+    top:-230px;
+    left:545px; 
+  }
+  
+  .decorationsThree:before {
+    border-top: 40px solid #00bbf9;
+    top:268px;
+    left:315px;
+    transform: rotate(-30deg);
+  }
+  
+  .plate {
+    position: absolute;
+    width: 130px;
+    height: 5px;
+    background-color: #00bbf9;
+    left:75px;
+    top:213px;
+  }
+  
+  .cake {
+    position: absolute;
+    overflow: hidden;
+    width:100px;
+    height: 50px;
+    background-color: #f15bb5;
+    border-radius: 10px 10px 0 0;
+    top:-50px;
+    left:15px;
+    box-shadow: inset 0 -15px #f9c74f, inset 0 15px #432818;
+  }
+  
+  .cake:before {
+    content:"";
+    position: absolute;
+    background-color: #432818;
+    width:10px;
+    height:20px;
+    top:5px;
+    border-radius:20px;
+    box-shadow: 10px 5px #f15bb5, 20px 0px #432818, 30px 2px #f15bb5, 40px 5px #432818, 50px 5px #f15bb5, 60px 0px #432818, 70px 5px #f15bb5, 80px 5px #432818, 90px 5px #f15bb5;
+  }
+  
+  .plate:before {
+    content:"";
+    position: absolute;
+    background: repeating-linear-gradient(-45deg, #9b5de5, #9b5de5 3px, #00f5d4 3px, #00f5d4 6px);
+    width:7px;
+    height: 25px;
+    top:-75px;
+    left:61px;
+  }
+  
+  .plate:after {
+    content:"";
+    position: absolute;
+    width:1px;
+    height: 5px;
+    background-color: #333;
+    top:-80px;
+    left:64px;
+  }
+  
+  
+  .flame {
+    position: absolute;
+    background: url(https://i.gifer.com/origin/18/1881d8691bd9ff18bea62c0a275e1da6_w200.gif);
+    background-size: cover;
+    z-index: 1;
+    width:15px;
+    height:30px;
+    top:-103px;
+    left:56px;
+  }
+
+  /*Style the inside part of the card*/
+  .cardInside {
+    position: absolute;
+    background-color: #fff;
+    width:280px;
+    height:370px;
+    z-index:-1;
+    left:0;
+    top:0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+  }
+  
+  .inside-text {
+    position: relative;
+    top:-180px;
+    transform: scale(0.7);
+  }
+  
+  .wishes {
+    position: relative;
+    text-align: justify;
+    top:-130px;
+    margin: 20px;
+  }
+  
+  p {
+    font-family: 'Brush Script MT';
+    font-size: x-large;
+    color: #333;
+  }
+  
+  .name {
+    margin-left:150px;
+  }
